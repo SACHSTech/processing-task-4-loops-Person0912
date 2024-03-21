@@ -46,9 +46,9 @@ public class Sketch extends PApplet {
     // Quadrant 3 - Linear Gradient
     float fltGradientX = 0;
 
-    for(int intStroke = 0; intStroke <= 255; intStroke += 1){
+    for(float fltStroke = 0; fltStroke <= 255; fltStroke += 1){
       
-      stroke(intStroke, intStroke, intStroke);
+      stroke(fltStroke, fltStroke, fltStroke);
       line(fltGradientX, height / 2, fltGradientX, height);
       fltGradientX = (float)(fltGradientX + width / 510.0);
       }
@@ -56,14 +56,14 @@ public class Sketch extends PApplet {
     // Quadrant 4 - 8 Petal Flower
     
     // Petals
-    for(int intAngle = 0; intAngle <= 360; intAngle += 45){
+    for(float fltAngle = 0; fltAngle <= 360; fltAngle += 45){
       
       fill(222, 106, 44);
       stroke(0, 0, 0);
 
       pushMatrix(); 
       translate(width * 3/4, height * 3/4); 
-      rotate(radians(intAngle));
+      rotate(radians(fltAngle));
       ellipse(width * 1/12, 0, width / 5, height / 20);
       popMatrix();
     }
